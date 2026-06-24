@@ -48,7 +48,7 @@ const About = () => {
             </div>
             <div className="about-hero-image">
               <img 
-                src="https://customer-assets.emergentagent.com/job_functional-training-3/artifacts/img_7qw9ngpp.png" 
+                src="https://customer-assets.emergentagent.com/job_functional-training-3/artifacts/4cfbd56u_3A12AC22-A86A-4EB4-94F0-670F095E8BEC.png" 
                 alt="Hubert Staniszewski w działaniu z klientem"
               />
             </div>

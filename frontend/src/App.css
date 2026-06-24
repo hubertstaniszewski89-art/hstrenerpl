@@ -608,7 +608,7 @@ p {
 }
 
 .philosophy-quote {
-  background: var(--black);
+  background: var(--white);
   padding: 80px 60px;
   margin-bottom: 60px;
   border: 1px solid #E0E0E0;
@@ -929,7 +929,7 @@ p {
 }
 
 .quote-block {
-  background: var(--black);
+  background: var(--white);
   padding: 60px;
   font-size: 22px;
   font-weight: 700;

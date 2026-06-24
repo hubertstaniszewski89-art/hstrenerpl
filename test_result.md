@@ -101,3 +101,180 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: "Test the hstrener.pl landing page to verify that the reported bugs have been fixed: 1) Images are not visible (user uploaded 4 photos of Hubert), 2) Some content is not visible because background and text are the same color (black text on black background)"
+
+frontend:
+  - task: "Image visibility - Hero section"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "user"
+        comment: "User reported images not visible - 4 photos of Hubert should be displayed"
+      - working: true
+        agent: "main"
+        comment: "Updated hero image URL to https://customer-assets.emergentagent.com/job_functional-training-3/artifacts/byp5gmh2_FA854823-48E8-46EF-9D4F-3B9FCE7463CC.png"
+      - working: true
+        agent: "testing"
+        comment: "✅ VERIFIED: Hero image loads successfully (1536px width). Image is clearly visible showing Hubert working with a client in the gym."
+
+  - task: "Image visibility - Kim jestem section"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "user"
+        comment: "User reported images not visible in intro/about sections"
+      - working: true
+        agent: "main"
+        comment: "Updated intro section image URL to https://customer-assets.emergentagent.com/job_functional-training-3/artifacts/4cfbd56u_3A12AC22-A86A-4EB4-94F0-670F095E8BEC.png"
+      - working: true
+        agent: "testing"
+        comment: "✅ VERIFIED: Intro section image loads successfully (1023px width). Image displays Hubert working with client."
+
+  - task: "Image visibility - About page hero"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/About.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "user"
+        comment: "User reported images not visible on About page"
+      - working: true
+        agent: "main"
+        comment: "Updated About page hero image URL to https://customer-assets.emergentagent.com/job_functional-training-3/artifacts/4cfbd56u_3A12AC22-A86A-4EB4-94F0-670F095E8BEC.png"
+      - working: true
+        agent: "testing"
+        comment: "✅ VERIFIED: About page hero image loads successfully (1023px width). Image is visible and properly displayed."
+
+  - task: "Text contrast - Problem cards section"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "user"
+        comment: "User reported text not visible due to black text on black background"
+      - working: true
+        agent: "main"
+        comment: "Fixed CSS for problem cards - white background with black text"
+      - working: true
+        agent: "testing"
+        comment: "✅ VERIFIED: All 3 problem cards have proper contrast - white background (rgb(255,255,255)) with black text (rgb(10,10,10)). All text is clearly readable."
+
+  - task: "Text contrast - Kim jestem section"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ VERIFIED: Intro section has proper contrast - dark background (rgb(10,10,10)) with white text (rgb(255,255,255)). Heading 'Kim jestem' is clearly visible."
+
+  - task: "Text contrast - System Staniszewskiego timeline"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ VERIFIED: All 5 methodology steps have proper contrast - white background (rgb(255,255,255)) with black text (rgb(10,10,10)). Steps: Ocena, Identyfikacja, Plan, Monitoring, Utrzymanie - all clearly readable."
+
+  - task: "Text contrast - Testimonials section"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ VERIFIED: All 3 testimonial cards have proper contrast - dark graphite background (rgb(30,30,30)) with light text (rgb(200,200,200)). All testimonials are readable."
+
+  - task: "Text contrast - About page Filozofia quote"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/About.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "user"
+        comment: "User reported black text on black background in quote sections"
+      - working: true
+        agent: "main"
+        comment: "Fixed philosophy quote section CSS - changed to white background with black text"
+      - working: true
+        agent: "testing"
+        comment: "✅ VERIFIED: Philosophy quote has proper contrast - white background (rgb(255,255,255)) with black text (rgb(10,10,10)). Quote text is clearly visible and readable."
+
+  - task: "Text contrast - Ebook page quote blocks"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Ebook.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "user"
+        comment: "User reported black text on black background in quote blocks"
+      - working: true
+        agent: "main"
+        comment: "Fixed quote blocks CSS - changed to white background with black text"
+      - working: true
+        agent: "testing"
+        comment: "✅ VERIFIED: All 3 quote blocks have proper contrast - white background (rgb(255,255,255)) with black text (rgb(10,10,10)). All quotes are clearly readable."
+
+  - task: "Page navigation and loading"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/App.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ VERIFIED: All 5 pages load successfully without errors - Home, O mnie, Oferta, eBook, Kontakt. No console errors detected."
+
+metadata:
+  created_by: "testing_agent"
+  version: "1.0"
+  test_sequence: 1
+  run_ui: true
+  last_tested: "2025-06-24"
+
+test_plan:
+  current_focus:
+    - "All bug fixes verified and working"
+  stuck_tasks: []
+  test_all: true
+  test_priority: "high_first"
+
+agent_communication:
+  - agent: "testing"
+    message: "Comprehensive testing completed for bug fixes. All reported issues have been successfully resolved. Images are now visible and all text has proper contrast. No black text on black background issues found. All pages load without errors."

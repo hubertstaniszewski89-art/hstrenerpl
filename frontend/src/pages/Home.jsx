@@ -64,7 +64,7 @@ const Home = () => {
           </div>
           <div className="hero-image">
             <img 
-              src="https://customer-assets.emergentagent.com/job_functional-training-3/artifacts/img_7qsvq0m3.png" 
+              src="https://customer-assets.emergentagent.com/job_functional-training-3/artifacts/byp5gmh2_FA854823-48E8-46EF-9D4F-3B9FCE7463CC.png" 
               alt="Hubert Staniszewski"
             />
           </div>
@@ -100,7 +100,7 @@ const Home = () => {
           <div className="intro-grid">
             <div className="intro-image">
               <img 
-                src="https://customer-assets.emergentagent.com/job_functional-training-3/artifacts/img_7qw9ngpp.png" 
+                src="https://customer-assets.emergentagent.com/job_functional-training-3/artifacts/4cfbd56u_3A12AC22-A86A-4EB4-94F0-670F095E8BEC.png" 
                 alt="Hubert w działaniu"
               />
             </div>
