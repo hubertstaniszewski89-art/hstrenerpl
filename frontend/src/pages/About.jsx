@@ -43,7 +43,7 @@ const About = () => {
         <div className="section-container">
           <div className="about-hero-grid">
             <div className="about-hero-content">
-              <h1>Specjalista od ruchu<br/>i funkcjonowania człowieka.</h1>
+              <h1>Specjalista ds. ruchu<br/>i sprawności człowieka.</h1>
               <p className="about-hero-subtitle">Ponad 20 lat doświadczenia w sporcie wyczynowym i pracy z klientami. System Staniszewskiego™ to rezultat lat nauki, prób i błędów — własnych i klientów.</p>
             </div>
             <div className="about-hero-image">

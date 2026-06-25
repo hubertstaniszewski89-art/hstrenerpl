@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Test the hstrener.pl landing page to verify that the reported bugs have been fixed: 1) Images are not visible (user uploaded 4 photos of Hubert), 2) Some content is not visible because background and text are the same color (black text on black background)"
+user_problem_statement: "Test the hstrener.pl landing page to verify that the reported bugs have been fixed: 1) Images are not visible (user uploaded 4 photos of Hubert), 2) Some content is not visible because background and text are the same color (black text on black background), 3) NEW BUG FIX: Hero section image was incorrectly showing portrait photo (white background) instead of photo with client (dark background), About page should have portrait photo, About page text should be 'Specjalista ds. ruchu i sprawności człowieka'"
 
 frontend:
   - task: "Image visibility - Hero section"
@@ -261,16 +261,70 @@ frontend:
         agent: "testing"
         comment: "✅ VERIFIED: All 5 pages load successfully without errors - Home, O mnie, Oferta, eBook, Kontakt. No console errors detected."
 
+  - task: "BUG FIX: Hero section image correction (Home page)"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "user"
+        comment: "User reported hero section was incorrectly showing portrait photo (white background) instead of photo with client (dark background with kettlebell)"
+      - working: true
+        agent: "main"
+        comment: "Changed hero section image back to: https://customer-assets.emergentagent.com/job_functional-training-3/artifacts/4cfbd56u_3A12AC22-A86A-4EB4-94F0-670F095E8BEC.png (photo with client, dark background)"
+      - working: true
+        agent: "testing"
+        comment: "✅ VERIFIED: Hero section shows correct image with client on dark background (4cfbd56u_3A12AC22-A86A-4EB4-94F0-670F095E8BEC.png). Image displays Hubert working with female client doing exercises with medicine ball in gym. NOT showing portrait photo."
+
+  - task: "BUG FIX: About page image correction"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/About.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "user"
+        comment: "User reported About page should show portrait photo (white background), not the gym photo"
+      - working: true
+        agent: "main"
+        comment: "About page keeps portrait photo: https://customer-assets.emergentagent.com/job_functional-training-3/artifacts/5p68kwf4_ChatGPT%20Image%2025%20cze%202026%2C%2008_46_05.png (white background)"
+      - working: true
+        agent: "testing"
+        comment: "✅ VERIFIED: About page hero section shows correct portrait photo on white background (5p68kwf4_ChatGPT%20Image%2025%20cze%202026%2C%2008_46_05.png). Professional headshot of Hubert with arms crossed. Images are NOT swapped between pages."
+
+  - task: "BUG FIX: About page title text correction"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/About.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "user"
+        comment: "User reported About page text should be changed from 'Specjalista od ruchu i funkcjonowania człowieka' to 'Specjalista ds. ruchu i sprawności człowieka'"
+      - working: true
+        agent: "main"
+        comment: "Changed About page H1 title to: 'Specjalista ds. ruchu i sprawności człowieka'"
+      - working: true
+        agent: "testing"
+        comment: "✅ VERIFIED: About page H1 text is correct - 'Specjalista ds. ruchu i sprawności człowieka'. Does NOT contain old text 'Specjalista od ruchu i funkcjonowania człowieka'."
+
 metadata:
   created_by: "testing_agent"
   version: "1.0"
-  test_sequence: 1
+  test_sequence: 2
   run_ui: true
-  last_tested: "2025-06-24"
+  last_tested: "2025-06-25"
 
 test_plan:
   current_focus:
-    - "All bug fixes verified and working"
+    - "All bug fixes verified and working - including image swap fix"
   stuck_tasks: []
   test_all: true
   test_priority: "high_first"
@@ -278,3 +332,5 @@ test_plan:
 agent_communication:
   - agent: "testing"
     message: "Comprehensive testing completed for bug fixes. All reported issues have been successfully resolved. Images are now visible and all text has proper contrast. No black text on black background issues found. All pages load without errors."
+  - agent: "testing"
+    message: "NEW BUG FIX TESTING COMPLETED (2025-06-25): Verified all three reported bug fixes: 1) Hero section now shows correct image with client on dark background (NOT portrait), 2) About page shows portrait photo on white background (NOT gym photo), 3) About page H1 text changed to 'Specjalista ds. ruchu i sprawności człowieka'. All tests passed. Images are correctly placed and not swapped. No console errors detected."
