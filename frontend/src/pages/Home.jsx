@@ -64,7 +64,7 @@ const Home = () => {
           </div>
           <div className="hero-image">
             <img 
-              src="https://customer-assets.emergentagent.com/job_functional-training-3/artifacts/byp5gmh2_FA854823-48E8-46EF-9D4F-3B9FCE7463CC.png" 
+              src="https://customer-assets.emergentagent.com/job_functional-training-3/artifacts/5p68kwf4_ChatGPT%20Image%2025%20cze%202026%2C%2008_46_05.png" 
               alt="Hubert Staniszewski"
             />
           </div>

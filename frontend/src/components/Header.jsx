@@ -20,7 +20,9 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <Link to="/" className="logo">
-          <div className="logo-box">HS</div>
+          <div className="logo-box">
+            <img src="https://customer-assets.emergentagent.com/job_functional-training-3/artifacts/gxrwakpm_logo%20HS.png" alt="HS Logo" />
+          </div>
           <span className="logo-text">hstrener.pl</span>
         </Link>
 
