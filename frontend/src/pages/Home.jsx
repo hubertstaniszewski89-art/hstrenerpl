@@ -56,7 +56,7 @@ const Home = () => {
   ];
 
   const featuredBottom = {
-    text: 'Od maja rozpoczęłam treningi indywidualne z Hubertem i od tamtej pory widzę pozytywne efekty naszej współpracy. Pozbyłam się paru zbędnych kilogramów, poprawiła się moja kondycja fizyczna i sprawność ruchowa. Zdecydowałam się na współpracę, gdyż Hubert posiada ogromną wiedzę nie tylko z zakresu prowadzenia ćwiczeń, ale również prawidłowej diety, niezbędnej przy treningu siłowym.',
+    text: 'Od maja rozpoczęłam treningi indywidualne z Hubertem i od tamtej pory widzę pozytywne efekty naszej współpracy. Pozbyłam się paru zbędnych kilogramów, poprawiła się moja kondycja fizyczna i sprawność ruchowa, co daje mi dużo satysfakcji i motywuje do dalszych ćwiczeń. Zdecydowałam się na współpracę z Hubertem, gdyż posiada on ogromną wiedzę nie tylko z zakresu prowadzenia ćwiczeń, ale również prawidłowej diety, która jest niezbędna przy treningu siłowym.',
     author: 'Basia',
     source: 'hstrener.pl'
   };
