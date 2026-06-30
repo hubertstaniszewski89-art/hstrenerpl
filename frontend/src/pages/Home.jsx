@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Star } from 'lucide-react';
 
 const Home = () => {
   const problems = [
@@ -31,23 +31,50 @@ const Home = () => {
     { step: '05', title: 'Utrzymanie', description: 'Długoterminowa sprawność' }
   ];
 
-  const testimonials = [
+  const featuredTop = {
+    text: 'Ćwiczenia z Hubertem to nie tylko ćwiczenia. To przede wszystkim zrozumienie potrzeb, wyznaczenie celów, dopasowanie treningów do możliwości, z jednoczesnym stopniowym podnoszeniem poprzeczki. Hubert zawsze dba o prawidłowe wykonywanie ćwiczeń i postawę. Koryguje to, co trzeba. Doradza też w diecie. Dziękuję za holistyczne podejście do ćwiczeń ze mną. Szczerze polecam Huberta wszystkim, którzy chcą zdrowo żyć.',
+    author: 'Marta Gądarowska',
+    source: 'Google · 3 miesiące temu'
+  };
+
+  const testimonialsThree = [
     {
-      text: 'Po latach bólu pleców wreszcie rozumiem co jest jego przyczyną. Hubert nie tylko usunął ból — nauczył mnie jak poruszać się prawidłowo.',
-      author: 'Marcin, 34 lata',
-      context: 'Problem: chroniczny ból dolnego odcinka kręgosłupa'
+      text: 'Jestem pod opieką Huberta już od ponad roku. Od tego czasu zaobserwowałem dużą poprawę siły, poprawę wyglądu swojej sylwetki i proporcji ciała. Zmagam się z cukrzycą od 9 lat (typ 1) — ale to nie staje na przeszkodzie. Hubert pod kątem mojej choroby ustawia plan treningowy, suplementację, dietę. A co najważniejsze — motywuje do ciężkiej pracy i niepoddawania się.',
+      author: 'Dezydery Kowalkowski',
+      source: 'Facebook'
     },
     {
-      text: 'Miałam już dość "planów treningowych" które działały przez tydzień. System Staniszewskiego to nie jest kolejny plan — to sposób myślenia.',
-      author: 'Anna, 41 lat',
-      context: 'Problem: kilka prób powrotu do formy, brak konsystencji'
+      text: 'Pełen profesjonalizm i indywidualne podejście do klienta. Świetny kontakt. Ćwiczenia i dieta dobrze dobrane, nawet przy insulinooporności. POLECAM!',
+      author: 'Krystian Nowacky',
+      source: 'Facebook'
     },
     {
-      text: 'Pracuję 10 godzin dziennie przy komputerze. Nie wierzyłem że mogę się poruszać bez bólu karku. 3 miesiące współpracy zmieniły wszystko.',
-      author: 'Tomasz, 28 lat',
-      context: 'Problem: dysfunkcja ruchu, siedzący tryb życia'
+      text: 'Hubert to specjalista w każdym calu, dla którego bycie trenerem to nie tylko zawód, ale i pasja. Były zawodowy sportowiec, doświadczony profesjonalista, od ponad 12 lat w branży fitness. Jakość prowadzenia klienta i ogrom wiedzy wykracza znacząco poza obecne standardy.',
+      author: 'Dominika',
+      source: 'Google · właścicielka studia treningu'
     }
   ];
+
+  const featuredBottom = {
+    text: 'Od maja rozpoczęłam treningi indywidualne z Hubertem i od tamtej pory widzę pozytywne efekty naszej współpracy. Pozbyłam się paru zbędnych kilogramów, poprawiła się moja kondycja fizyczna i sprawność ruchowa. Zdecydowałam się na współpracę, gdyż Hubert posiada ogromną wiedzę nie tylko z zakresu prowadzenia ćwiczeń, ale również prawidłowej diety, niezbędnej przy treningu siłowym.',
+    author: 'Basia',
+    source: 'hstrener.pl'
+  };
+
+  const shortQuotes = [
+    { text: 'Polecam! Konkretnie i skutecznie.', author: 'Adam D.' },
+    { text: 'Słucha, dopasowuje program do aktualnych warunków, jest elastyczny.', author: 'Łukasz Ogonowski' },
+    { text: 'Zawsze punktualny i świetnie przygotowany. Bardzo się cieszę, że trafiłam właśnie do niego.', author: 'Dagmara Jabłońska' },
+    { text: 'Zna się na rzeczy. Krok po kroku osiągamy zamierzony cel.', author: 'Asia Macko' }
+  ];
+
+  const renderStars = () => (
+    <div className="stars">
+      {[...Array(5)].map((_, i) => (
+        <Star key={i} size={16} fill="#C9A84C" stroke="#C9A84C" />
+      ))}
+    </div>
+  );
 
   return (
     <div className="home">
@@ -147,13 +174,45 @@ const Home = () => {
             <div className="section-line"></div>
           </div>
           <h2>Co mówią klienci</h2>
-          <div className="testimonials-grid">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-card">
-                <p className="testimonial-text">"{testimonial.text}"</p>
+
+          <div className="testimonial-featured" data-testid="testimonial-featured-top">
+            {renderStars()}
+            <p className="testimonial-featured-text">"{featuredTop.text}"</p>
+            <div className="testimonial-author">
+              <strong>{featuredTop.author}</strong>
+              <span>{featuredTop.source}</span>
+            </div>
+          </div>
+
+          <div className="testimonials-grid-3">
+            {testimonialsThree.map((t, index) => (
+              <div key={index} className="testimonial-card-light" data-testid={`testimonial-card-${index}`}>
+                {renderStars()}
+                <p className="testimonial-text">"{t.text}"</p>
                 <div className="testimonial-author">
-                  <strong>{testimonial.author}</strong>
-                  <span>{testimonial.context}</span>
+                  <strong>{t.author}</strong>
+                  <span>{t.source}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="testimonial-featured" data-testid="testimonial-featured-bottom">
+            {renderStars()}
+            <p className="testimonial-featured-text">"{featuredBottom.text}"</p>
+            <div className="testimonial-author">
+              <strong>{featuredBottom.author}</strong>
+              <span>{featuredBottom.source}</span>
+            </div>
+          </div>
+
+          <div className="testimonials-quotes-grid">
+            {shortQuotes.map((q, index) => (
+              <div key={index} className="testimonial-quote" data-testid={`testimonial-quote-${index}`}>
+                {renderStars()}
+                <p className="testimonial-text">"{q.text}"</p>
+                <div className="testimonial-author">
+                  <strong>{q.author}</strong>
                 </div>
               </div>
             ))}

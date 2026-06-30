@@ -39,6 +39,10 @@ Static-content landing site with FastAPI backend (currently only a status-check 
 - Routing: dodano ScrollToTop (components/ScrollToTop.jsx) — nawigacja resetuje scroll do góry; linki z hashem (#diagnostyka itd.) nadal scrollują do sekcji.
 - eBook: płaska okładka zastąpiona renderem 3D (blend z czarnym tłem #0A0A0A, kolumna 480px); usunięto fałszywy punkt "Case study" z listy hero i z listy zakupu — zastąpiono treścią o makro/mezo/mikrocyklu.
 
+## Updates (2026-06-30)
+- Home OPINIE: zastąpiono testimoniale prawdziwymi opiniami — 2 karty wyróżnione (ciemne #0A0A0A, lewy border 3px gold), grid 3 kart (#F8F7F5, lewy border 2px gold), grid 4 krótkich cytatów (#F8F7F5, górny border 2px gold), wszystkie z 5 gwiazdkami (lucide Star).
+- Kontakt: dodano sekcję "Gdzie przyjmuję" pod formularzem — Google Maps iframe (ul. Cybernetyki 10, Warszawa, height 400px, full width) + grid 3 kolumny (Miasto / Online / Dojazd).
+
 ## Next / Backlog
 - Wire Contact form & Ebook signup to real backend endpoints (currently static UI)
 - Add SEO meta / Polish content polish if desired

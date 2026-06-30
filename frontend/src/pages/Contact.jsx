@@ -166,6 +166,40 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* GDZIE PRZYJMUJĘ */}
+      <section className="location-section section-dark" data-testid="location-section">
+        <div className="section-container">
+          <div className="section-header">
+            <span className="section-label">Lokalizacja</span>
+            <div className="section-line"></div>
+          </div>
+          <h2>Gdzie przyjmuję</h2>
+          <div className="location-map">
+            <iframe
+              title="Lokalizacja — Warszawa, ul. Cybernetyki 10"
+              src="https://www.google.com/maps?q=ul.%20Cybernetyki%2010,%20Warszawa,%20Polska&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <div className="location-grid">
+            <div className="location-item" data-testid="location-miasto">
+              <h3>Miasto</h3>
+              <p><strong>Warszawa</strong>Sesje stacjonarne</p>
+            </div>
+            <div className="location-item" data-testid="location-online">
+              <h3>Online</h3>
+              <p><strong>Cała Polska</strong>Diagnostyka i konsultacje</p>
+            </div>
+            <div className="location-item" data-testid="location-dojazd">
+              <h3>Dojazd</h3>
+              <p><strong>Dokładna lokalizacja</strong>Podawana po umówieniu wizyty</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* AUTO EMAIL INFO */}
       <section className="auto-email-info section-dark">
         <div className="section-container">
