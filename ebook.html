@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eBook | Mądry Trening Po 30 | hstrener.pl</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--black:#0A0A0A;--white:#fff;--gold:#C9A84C;--w65:rgba(255,255,255,.65);--w10:rgba(255,255,255,.08);--dark-text:#1A1A1A;--mid-text:#5A5A5A}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{position:fixed;inset:0 0 auto 0;z-index:999;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 80px;background:var(--black);border-bottom:1px solid var(--w10)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-box{width:36px;height:36px;border:1.5px solid var(--white);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;letter-spacing:-.5px}
+.logo-name{font-size:14px;font-weight:600}
+.nav-links{display:flex;gap:36px;list-style:none}
+.nav-links a{font-size:14px;font-weight:500;color:var(--w65);transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-links a.active{color:var(--white);text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--gold);text-decoration-thickness:2px}
+.container{max-width:1200px;margin:0 auto;padding:0 80px}
+.label{display:flex;align-items:center;gap:14px;font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;white-space:nowrap}
+.label::after{content:'';flex:1;height:1px;background:currentColor;opacity:.4}
+h1,h2{font-weight:900;line-height:1.05;letter-spacing:-1.5px}
+h1{font-size:clamp(38px,5.5vw,72px)}
+h2{font-size:clamp(28px,4vw,52px)}
+
+/* HERO: split — cover left (dark), info right (dark) */
+.hero{display:grid;grid-template-columns:1fr 1fr;padding-top:64px;min-height:100vh}
+.hero-cover{background:var(--black);display:flex;align-items:center;justify-content:center;padding:80px}
+.book-ph{
+  width:260px;aspect-ratio:7/10;background:#1a1a1a;
+  border:1px solid rgba(201,168,76,.25);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:32px;gap:6px;
+  box-shadow:12px 16px 48px rgba(0,0,0,.5)
+}
+/* ZASTĄP book-ph: <img src="img/ebook-cover.png" alt="Mądry Trening Po 30"> */
+.book-ph .bp-title{font-size:18px;font-weight:900;line-height:1.2;color:var(--white)}
+.book-ph .bp-tom{font-size:10px;letter-spacing:2px;color:var(--gold);margin-top:8px}
+.book-ph .bp-site{font-size:10px;color:rgba(255,255,255,.3);margin-top:12px}
+.hero-info{background:var(--black);display:flex;flex-direction:column;justify-content:center;padding:80px}
+.hero-info h1{margin-bottom:20px}
+.hero-info .hi-sub{font-size:16px;color:var(--w65);line-height:1.7;margin-bottom:32px;max-width:460px}
+.hero-chk{list-style:none;margin-bottom:32px}
+.hero-chk li{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--w65);padding:6px 0}
+.ck{color:var(--gold);flex-shrink:0;font-size:16px}
+
+/* FORM CARD */
+.sec-white{background:var(--white);color:var(--dark-text);padding:80px 0}
+.sec-dark{background:var(--black);padding:80px 0}
+.form-card{max-width:480px;border:1px solid rgba(0,0,0,.1);padding:48px}
+.form-card h2{font-size:clamp(24px,3.5vw,40px);color:var(--dark-text);margin-bottom:12px}
+.form-card .fc-sub{font-size:15px;color:var(--mid-text);margin-bottom:32px;line-height:1.7}
+.form-field{margin-bottom:16px}
+.form-field input{
+  width:100%;padding:14px 0;border:none;border-bottom:1.5px solid rgba(0,0,0,.15);
+  font-size:15px;font-family:inherit;background:transparent;outline:none;color:var(--dark-text);
+  transition:border-color .2s
+}
+.form-field input:focus{border-bottom-color:var(--dark-text)}
+.form-field input::placeholder{color:#bbb}
+.btn-dark-fill{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:var(--dark-text);color:var(--white);padding:14px 28px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;border:none;transition:opacity .2s}
+.btn-dark-fill:hover{opacity:.85}
+.btn-gold-fill{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:var(--gold);color:var(--dark-text);padding:14px 28px;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer;border:none;transition:opacity .2s}
+.btn-gold-fill:hover{opacity:.9}
+.btn-note{font-size:12px;color:#999;margin-top:10px;line-height:1.5}
+
+/* QUOTES */
+.quotes-stack{display:flex;flex-direction:column;gap:20px;max-width:680px;margin:48px auto 0}
+.quote-box{border:1px solid rgba(0,0,0,.1);padding:36px 48px;font-style:italic;font-size:16px;color:var(--dark-text);line-height:1.7;text-align:center}
+
+/* PELNA WERSJA — dark bg + white card */
+.pelna-wrap{display:flex;justify-content:center}
+.pelna-card{background:var(--white);max-width:480px;width:100%;padding:48px}
+.pelna-card h2{font-size:clamp(22px,3vw,36px);color:var(--dark-text);margin-bottom:32px}
+.pelna-meta-row{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:1px solid rgba(0,0,0,.1);margin-bottom:24px}
+.pelna-meta{font-size:13px;color:var(--mid-text)}
+.pelna-price{font-size:40px;font-weight:900;color:var(--dark-text);letter-spacing:-2px}
+.pelna-chk{list-style:none;margin-bottom:28px}
+.pelna-chk li{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:14px;color:var(--mid-text);border-bottom:1px solid rgba(0,0,0,.06)}
+.pelna-chk li:last-child{border:none}
+.pelna-note{font-size:12px;color:#aaa;text-align:center;margin-top:10px}
+
+/* CHAPTERS */
+.chapters-heading{margin-bottom:40px}
+.block-label{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.ch-group{margin-bottom:32px}
+.chapter-item{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:20px 24px;border-bottom:1px solid var(--w10);align-items:center;background:rgba(255,255,255,.03)}
+.chapter-item:last-child{border-bottom:none}
+.ch-num{font-size:24px;font-weight:900;color:var(--gold);letter-spacing:-1px;line-height:1}
+.ch-title{font-size:15px;font-weight:700;margin-bottom:3px}
+.ch-desc{font-size:13px;color:var(--w65)}
+
+/* TOM II */
+.tom2-wrap{display:flex;justify-content:center}
+.tom2-card{max-width:480px;width:100%;border:1px solid rgba(0,0,0,.1);padding:48px;text-align:center}
+.tom2-tag{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:16px}
+.tom2-card h2{color:var(--dark-text);margin-bottom:16px}
+.tom2-card p{font-size:15px;color:var(--mid-text);margin-bottom:32px;line-height:1.7}
+.tom2-form{display:flex;gap:0}
+.tom2-form input{flex:1;padding:13px 16px;border:1.5px solid rgba(0,0,0,.2);border-right:none;font-size:14px;font-family:inherit;outline:none;background:transparent;color:var(--dark-text)}
+.tom2-form input::placeholder{color:#bbb}
+.tom2-form button{padding:13px 24px;background:var(--dark-text);color:var(--white);border:none;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;white-space:nowrap}
+
+/* FOOTER */
+footer{background:var(--black);border-top:1px solid var(--w10);padding:60px 0 32px}
+.foot-grid{display:grid;grid-template-columns:1fr auto auto;gap:80px}
+.foot-logo{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.foot-sys{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.foot-tag{font-size:13px;color:var(--w65)}
+.foot-col h4{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--w65);margin-bottom:16px}
+.foot-col ul{list-style:none}
+.foot-col li{margin-bottom:10px}
+.foot-col a{font-size:14px;color:var(--w65)}
+.foot-col a:hover{color:var(--white)}
+.foot-copy{border-top:1px solid var(--w10);margin-top:40px;padding-top:20px;text-align:center;font-size:12px;color:rgba(255,255,255,.25)}
+
+@media(max-width:900px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-cover{padding:60px 20px;min-height:320px}
+  .hero-info{padding:60px 20px}
+  .container{padding:0 20px}
+  .sec-white,.sec-dark{padding:60px 0}
+  .form-card{padding:32px 20px;max-width:100%}
+  .quotes-stack{padding:0 0}
+  .quote-box{padding:28px 24px}
+  .pelna-card{padding:32px 20px}
+  .tom2-card{padding:32px 20px;max-width:100%}
+  .tom2-form{flex-direction:column}
+  .tom2-form input{border-right:1.5px solid rgba(0,0,0,.2);border-bottom:none}
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo">
+    <div class="logo-box">HS</div>
+    <span class="logo-name">hstrener.pl</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="o-mnie.html">O mnie</a></li>
+    <li><a href="oferta.html">Oferta</a></li>
+    <li><a href="ebook.html" class="active">eBook</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-cover">
+    <!--
+      ZASTĄP: <img src="img/ebook-cover.png" alt="Mądry Trening Po 30 — okładka" style="max-width:280px;width:100%">
+    -->
+    <div class="book-ph">
+      <div class="bp-title">MĄDRY<br>TRENING<br>PO 30</div>
+      <div class="bp-tom">TOM I</div>
+      <div class="bp-site">hstrener.pl</div>
+    </div>
+  </div>
+  <div class="hero-info">
+    <span class="label">eBook</span>
+    <h1>Mądry Trening Po 30<br>— Tom I</h1>
+    <p class="hi-sub">System treningowy który działa w realnym życiu — z pracą, rodziną i stresem. Bez chaosu, bez ekstremalnych planów, bez ignorowania rzeczywistości.</p>
+    <ul class="hero-chk">
+      <li><span class="ck">⊙</span> 7 rozdziałów praktycznej wiedzy</li>
+      <li><span class="ck">⊙</span> System nie plan — różnica która zmienia wszystko</li>
+      <li><span class="ck">⊙</span> Makrocykl, mezocykl i mikrocykl — kompletny system planowania</li>
+    </ul>
+  </div>
+</div>
+
+<!-- PRZECZYTAJ ZANIM ZDECYDUJESZ -->
+<section class="sec-white" id="pobierz">
+  <div class="container">
+    <div class="form-card">
+      <h2>Przeczytaj zanim zdecydujesz.</h2>
+      <p class="fc-sub">Pobierz darmowy rozdział. Bez spamu. Tylko wartościowe treści raz w tygodniu.</p>
+      <form onsubmit="return false">
+        <div class="form-field">
+          <input type="text" placeholder="Imię">
+        </div>
+        <div class="form-field">
+          <input type="email" placeholder="Email">
+        </div>
+        <button class="btn-dark-fill" type="submit">✉ Wyślij mi rozdział</button>
+        <p class="btn-note">Otrzymasz rozdział "Dlaczego większość planów treningowych nie działa" + dostęp do newslettera z wartościowymi treściami.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CYTATY -->
+<section class="sec-white" style="padding-top:0;border-top:1px solid rgba(0,0,0,.06)">
+  <div class="container">
+    <span class="label">Cytaty</span>
+    <div class="quotes-stack">
+      <div class="quote-box">"Dobry plan treningowy nie wymaga idealnych warunków. Uwzględnia Twoje ograniczenia i dostosowuje się do rzeczywistości."</div>
+      <div class="quote-box">"Progres nie jest liniowy. System który to ignoruje skazany jest na porażkę."</div>
+      <div class="quote-box">"Regeneracja nie jest nagrodą za ciężki trening. To fundamentalna część procesu adaptacji."</div>
+    </div>
+  </div>
+</section>
+
+<!-- PEŁNA WERSJA -->
+<section class="sec-dark">
+  <div class="container">
+    <div class="pelna-wrap">
+      <div class="pelna-card">
+        <h2>Pełna wersja — Kup teraz</h2>
+        <div class="pelna-meta-row">
+          <span class="pelna-meta">Format: PDF, A5, 124 strony</span>
+          <span class="pelna-price">89 PLN</span>
+        </div>
+        <ul class="pelna-chk">
+          <li><span class="ck">⊙</span> Wszystkie 7 rozdziałów</li>
+          <li><span class="ck">⊙</span> Kompletny system planowania (makro / mezo / mikrocykli)</li>
+          <li><span class="ck">⊙</span> Checklisty i narzędzia do samodzielnej oceny</li>
+          <li><span class="ck">⊙</span> Dostęp do aktualizacji (Tom I wersja 2.0)</li>
+        </ul>
+        <a href="#" class="btn-gold-fill">⬇ Kup teraz</a>
+        <p class="pelna-note">Po kliknięciu zostaniesz przekierowany do bezpiecznej strony płatności.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CO ZNAJDZIESZ W KSIĄŻCE -->
+<section class="sec-dark" style="border-top:1px solid var(--w10)">
+  <div class="container">
+    <div class="chapters-heading">
+      <h2>Co znajdziesz w książce</h2>
+    </div>
+
+    <div class="ch-group">
+      <div class="block-label">Blok I — Fundamenty skutecznego treningu</div>
+      <div class="chapter-item">
+        <div class="ch-num">01</div>
+        <div>
+          <div class="ch-title">Dlaczego większość planów treningowych nie działa</div>
+          <div class="ch-desc">Problem nie jest w Tobie. Problem jest w konstrukcji planu.</div>
+        </div>
+      </div>
+      <div class="chapter-item">
+        <div class="ch-num">02</div>
+        <div>
+          <div class="ch-title">Motywacja — dlaczego nie musisz jej ciągle szukać</div>
+          <div class="ch-desc">Dlaczego silna wola to zły fundament długoterminowego treningu.</div>
+        </div>
+      </div>
+      <div class="chapter-item">
+        <div class="ch-num">03</div>
+        <div>
+          <div class="ch-title">Co sprawia, że trening jest naprawdę efektywny</div>
+          <div class="ch-desc">Adaptacja, regeneracja i trzy filary skutecznego treningu.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ch-group">
+      <div class="block-label">Blok II — Struktura i planowanie</div>
+      <div class="chapter-item">
+        <div class="ch-num">04</div>
+        <div>
+          <div class="ch-title">Dlaczego planowanie w czasie ma kluczowe znaczenie</div>
+          <div class="ch-desc">Plan jako mapa, nie sztywny scenariusz.</div>
+        </div>
+      </div>
+      <div class="chapter-item">
+        <div class="ch-num">05</div>
+        <div>
+          <div class="ch-title">Makrocykl — myślenie o treningu w skali miesięcy i roku</div>
+          <div class="ch-desc">Roczna struktura treningu i jej mezocykle.</div>
+        </div>
+      </div>
+      <div class="chapter-item">
+        <div class="ch-num">06</div>
+        <div>
+          <div class="ch-title">Mezocykl — porządkowanie pracy w krótszych etapach</div>
+          <div class="ch-desc">4–5 tygodniowe cykle pracy i progresu.</div>
+        </div>
+      </div>
+      <div class="chapter-item">
+        <div class="ch-num">07</div>
+        <div>
+          <div class="ch-title">Mikrocykl — jak zaplanować tydzień treningowy</div>
+          <div class="ch-desc">Praktyczna realizacja planu w tygodniowym rytmie.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOM II TEASER -->
+<section class="sec-white">
+  <div class="container">
+    <div class="tom2-wrap">
+      <div class="tom2-card">
+        <span class="tom2-tag">W przygotowaniu</span>
+        <h2>Tom II — Zaawansowane strategie</h2>
+        <p>Periodyzacja, autoregulacja, praca z kontuzją i długoterminowy progres. Zapisz się żeby otrzymać powiadomienie.</p>
+        <div class="tom2-form">
+          <input type="email" placeholder="Twój email">
+          <button type="button">Powiadom mnie</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo logo">
+          <div class="logo-box">HS</div>
+          <span class="logo-name">hstrener.pl</span>
+        </div>
+        <div class="foot-sys">System Staniszewskiego™</div>
+        <div class="foot-tag">Ruch który działa. Ciało które nie boli.</div>
+      </div>
+      <div class="foot-col">
+        <h4>Strona</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="o-mnie.html">O mnie</a></li>
+          <li><a href="oferta.html">Oferta</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Zasoby</h4>
+        <ul>
+          <li><a href="ebook.html">eBook</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-copy">© 2025 hstrener.pl — Hubert Staniszewski. Wszelkie prawa zastrzeżone.</div>
+  </div>
+</footer>
+
+</body>
+</html>
