@@ -24,8 +24,8 @@ const About = () => {
       description: 'Praca z mięśniami, powięziami i strukturami miękkotkankowych. Redukcja napięć i przywracanie prawidłowych wzorców ruchowych.'
     },
     {
-      title: 'Żywienie',
-      description: 'Strategia żywieniowa dopasowana do celów treningowych i trybu życia. Bez diet ekstremalnych — system który możesz utrzymać długoterminowo.'
+      title: 'Żywienie i suplementacja',
+      description: 'Strategia żywieniowa i suplementacyjna dopasowana do celów treningowych i trybu życia. Bez diet ekstremalnych — system który możesz utrzymać długoterminowo.'
     }
   ];
 
@@ -33,6 +33,7 @@ const About = () => {
     'Lekkoatletyka — starty na poziomie Mistrzostw Polski',
     'AZS AWF Warszawa — sport akademicki',
     'Zawodnik IFBB — kulturystyka',
+    'Zawodnik NPC — kulturystyka',
     'I miejsce Grand Prix Polski 2016'
   ];
 
@@ -64,7 +65,7 @@ const About = () => {
             <div className="section-line"></div>
           </div>
           <div className="story-content">
-            <h2>Skąd przyszedłem</h2>
+            <h2>Droga do Systemu Staniszewskiego</h2>
             <div className="story-text">
               <p>Zaczynałem jako lekkoatleta. AZS AWF Warszawa, starty na poziomie Mistrzostw Polski, life całkowicie podporządkowany sportowi. Wiedziałem że trening może zmieniać ciała — ale dopiero lata później zrozumiałem że to nie wystarczy.</p>
               
@@ -120,7 +121,7 @@ const About = () => {
             <span className="section-label">Osiągnięcia</span>
             <div className="section-line"></div>
           </div>
-          <h2>Background sportowy</h2>
+          <h2>Doświadczenie sportowe</h2>
           <ul className="achievements-list">
             {achievements.map((achievement, index) => (
               <li key={index}>

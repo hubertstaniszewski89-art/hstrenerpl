@@ -59,7 +59,7 @@ const Home = () => {
             <p className="hero-subtitle">Specjalista od ruchu i funkcjonowania — dla każdego kto chce żyć sprawnie, bez bólu i bez wywracania życia do góry nogami.</p>
             <div className="hero-cta">
               <Link to="/oferta" className="btn btn-primary">Poznaj ofertę</Link>
-              <Link to="/ebook" className="btn btn-secondary">Pobierz darmowy rozdział</Link>
+              <Link to="/ebook" className="btn btn-secondary">Pobierz darmowy rozdział eBooka</Link>
             </div>
           </div>
           <div className="hero-image">
@@ -173,7 +173,7 @@ const Home = () => {
                 <li><CheckCircle2 size={20} /> Jak budować progres bez ryzyka kontuzji</li>
                 <li><CheckCircle2 size={20} /> System który działa w realnym życiu</li>
               </ul>
-              <Link to="/ebook" className="btn btn-primary">Pobierz darmowy rozdział</Link>
+              <Link to="/ebook" className="btn btn-primary">Pobierz darmowy rozdział eBooka</Link>
             </div>
           </div>
         </div>

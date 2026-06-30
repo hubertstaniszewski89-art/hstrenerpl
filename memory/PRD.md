@@ -33,6 +33,12 @@ Static-content landing site with FastAPI backend (currently only a status-check 
 - eBook: poprawny spis treści (Blok I: 01–03, Blok II: 04–07) + linia "Zakończenie Tomu I · O autorze"; zaktualizowano free-chapter-note.
 - eBook: cena 48px → 58px, zmniejszony odstęp nad przyciskiem zakupu.
 
+## Updates (2026-06-27, runda 2)
+- O mnie: nagłówek "Skąd przyszedłem" → "Droga do Systemu Staniszewskiego"; "Background sportowy" → "Doświadczenie sportowe"; dodano "Zawodnik NPC — kulturystyka"; karta "Żywienie" → "Żywienie i suplementacja" (+ opis).
+- Home: przyciski "Pobierz darmowy rozdział" → "Pobierz darmowy rozdział eBooka" (hero + banner).
+- Routing: dodano ScrollToTop (components/ScrollToTop.jsx) — nawigacja resetuje scroll do góry; linki z hashem (#diagnostyka itd.) nadal scrollują do sekcji.
+- eBook: płaska okładka zastąpiona renderem 3D (blend z czarnym tłem #0A0A0A, kolumna 480px); usunięto fałszywy punkt "Case study" z listy hero i z listy zakupu — zastąpiono treścią o makro/mezo/mikrocyklu.
+
 ## Next / Backlog
 - Wire Contact form & Ebook signup to real backend endpoints (currently static UI)
 - Add SEO meta / Polish content polish if desired

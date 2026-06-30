@@ -55,13 +55,11 @@ const Ebook = () => {
         <div className="section-container">
           <div className="ebook-hero-grid">
             <div className="ebook-hero-image">
-              <div className="ebook-cover">
-                <div className="ebook-cover-content">
-                  <span className="ebook-cover-label">System Staniszewskiego™</span>
-                  <h3>Mądry Trening Po 30</h3>
-                  <span className="ebook-cover-tom">TOM I</span>
-                </div>
-              </div>
+              <img
+                className="ebook-cover-img"
+                src="https://customer-assets.emergentagent.com/job_hstrener-clone/artifacts/u2di2b3d_ChatGPT%20Image%2030%20cze%202026%2C%2009_42_53.png"
+                alt="Okładka eBooka Mądry Trening Po 30 — Tom I"
+              />
             </div>
             <div className="ebook-hero-content">
               <span className="ebook-label">eBook</span>
@@ -70,7 +68,7 @@ const Ebook = () => {
               <ul className="ebook-features">
                 <li><CheckCircle2 size={20} /> 7 rozdziałów praktycznej wiedzy</li>
                 <li><CheckCircle2 size={20} /> System nie plan — różnica która zmienia wszystko</li>
-                <li><CheckCircle2 size={20} /> Case study z realnej współpracy z klientem</li>
+                <li><CheckCircle2 size={20} /> Makrocykl, mezocykl i mikrocykl — kompletny system planowania</li>
               </ul>
             </div>
           </div>
@@ -172,7 +170,7 @@ const Ebook = () => {
                 </div>
                 <ul className="purchase-includes">
                   <li><CheckCircle2 size={18} /> Wszystkie 7 rozdziałów</li>
-                  <li><CheckCircle2 size={18} /> Case study z realnej współpracy</li>
+                  <li><CheckCircle2 size={18} /> Kompletny system planowania (makro / mezo / mikrocykl)</li>
                   <li><CheckCircle2 size={18} /> Checklisty i narzędzia do samodzielnej oceny</li>
                   <li><CheckCircle2 size={18} /> Dostęp do aktualizacji (Tom I wersja 2.0)</li>
                 </ul>

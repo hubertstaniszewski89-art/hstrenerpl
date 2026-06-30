@@ -794,9 +794,15 @@ p {
 /* EBOOK PAGE */
 .ebook-hero-grid {
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 480px 1fr;
   gap: 80px;
   align-items: center;
+}
+
+.ebook-cover-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .ebook-cover {
