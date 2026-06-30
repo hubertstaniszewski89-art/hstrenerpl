@@ -280,11 +280,13 @@ main {
 
 .section-dark {
   background: var(--black);
+  padding: 96px 60px;
 }
 
 .section-light {
   background: var(--white);
   color: var(--black);
+  padding: 96px 60px;
 }
 
 .section-light h1,
@@ -373,7 +375,7 @@ p {
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.85fr 1.15fr;
   gap: 80px;
   align-items: center;
 }
@@ -402,6 +404,7 @@ p {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 6px;
 }
 
 .problems-grid {
@@ -941,6 +944,31 @@ p {
   font-size: 14px;
 }
 
+.toc-block {
+  margin-bottom: 48px;
+}
+
+.toc-block:last-of-type {
+  margin-bottom: 0;
+}
+
+.toc-block-title {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.toc-closing {
+  margin-top: 40px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: var(--grey);
+  text-align: center;
+}
+
 .quotes-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -975,7 +1003,7 @@ p {
 }
 
 .purchase-details {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
 .purchase-info {
@@ -993,7 +1021,7 @@ p {
 }
 
 .purchase-price {
-  font-size: 48px;
+  font-size: 58px;
   font-weight: 900;
   color: var(--black);
   letter-spacing: -0.04em;
@@ -1223,7 +1251,9 @@ p {
 @media (max-width: 1024px) {
   .header-container,
   .footer-container,
-  .section {
+  .section,
+  .section-light,
+  .section-dark {
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -1290,6 +1320,8 @@ p {
   .header-container,
   .footer-container,
   .section,
+  .section-light,
+  .section-dark,
   .product-section {
     padding-left: 24px;
     padding-right: 24px;
@@ -1310,6 +1342,8 @@ p {
   }
 
   .section,
+  .section-light,
+  .section-dark,
   .product-section {
     padding-top: 60px;
     padding-bottom: 60px;

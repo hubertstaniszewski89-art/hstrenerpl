@@ -64,8 +64,8 @@ const Home = () => {
           </div>
           <div className="hero-image">
             <img 
-              src="https://customer-assets.emergentagent.com/job_functional-training-3/artifacts/4cfbd56u_3A12AC22-A86A-4EB4-94F0-670F095E8BEC.png" 
-              alt="Hubert Staniszewski z klientką"
+              src="https://customer-assets.emergentagent.com/job_hstrener-clone/artifacts/e7vo98ok_ChatGPT%20Image%2027%20cze%202026%2C%2021_34_07.png" 
+              alt="Hubert Staniszewski podczas konsultacji z klientem"
             />
           </div>
         </div>
@@ -122,7 +122,7 @@ const Home = () => {
       <section className="methodology section-light">
         <div className="section-container">
           <div className="section-header">
-            <span className="section-label">Metodologia</span>
+            <span className="section-label">System</span>
             <div className="section-line"></div>
           </div>
           <h2>System Staniszewskiego™</h2>

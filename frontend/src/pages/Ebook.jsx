@@ -22,14 +22,24 @@ const Ebook = () => {
     setTomIIEmail('');
   };
 
-  const chapters = [
-    { number: '01', title: 'Dlaczego większość planów nie działa długoterminowo', description: 'Problem nie jest w Tobie. Problem jest w konstrukcji planu.' },
-    { number: '02', title: 'Co to znaczy "trening funkcjonalny" naprawdę', description: 'Oddzielenie buzzwordów od praktyki która działa.' },
-    { number: '03', title: 'Jak budować progres bez ryzyka kontuzji', description: 'Periodyzacja, autoregulacja i monitoring — system nie plan.' },
-    { number: '04', title: 'Regeneracja nie jest opcjonalna', description: 'Sen, stres i odżywianie jako część systemu treningowego.' },
-    { number: '05', title: 'Trening w realnym życiu — praca, rodzina, stres', description: 'Jak utrzymać konsystencję kiedy życie nie współpracuje.' },
-    { number: '06', title: 'Kiedy potrzebujesz specjalisty', description: 'Jak rozpoznać że problem wymaga pomocy zewnętrznej.' },
-    { number: '07', title: 'System Staniszewskiego™ w praktyce', description: 'Case study — jak wygląda długoterminowa współpraca.' }
+  const tocBlocks = [
+    {
+      block: 'Blok I — Fundamenty skutecznego treningu',
+      chapters: [
+        { number: '01', title: 'Dlaczego większość planów treningowych nie działa', description: 'Problem nie jest w Tobie. Problem jest w konstrukcji planu.' },
+        { number: '02', title: 'Motywacja — dlaczego nie musisz jej ciągle szukać', description: 'Dlaczego silna wola to zły fundament długoterminowego treningu.' },
+        { number: '03', title: 'Co sprawia, że trening jest naprawdę efektywny', description: 'Adaptacja, regeneracja i trzy filary skutecznego treningu.' }
+      ]
+    },
+    {
+      block: 'Blok II — Struktura i planowanie',
+      chapters: [
+        { number: '04', title: 'Dlaczego planowanie w czasie ma kluczowe znaczenie', description: 'Plan jako mapa, nie sztywny scenariusz.' },
+        { number: '05', title: 'Makrocykl — myślenie o treningu w skali miesięcy i roku', description: 'Roczna struktura treningu i jej mezocykle.' },
+        { number: '06', title: 'Mezocykl — porządkowanie pracy w krótszych etapach', description: '4–5 tygodniowe cykle pracy i progresu.' },
+        { number: '07', title: 'Mikrocykl — jak zaplanować tydzień treningowy', description: 'Praktyczna realizacja planu w tygodniowym rytmie.' }
+      ]
+    }
   ];
 
   const quotes = [
@@ -98,7 +108,7 @@ const Ebook = () => {
                   Wyślij mi rozdział
                 </button>
               </form>
-              <p className="free-chapter-note">Otrzymasz rozdział "Dlaczego większość planów nie działa długoterminowo" + dostęp do newslettera z wartościowymi treściami.</p>
+              <p className="free-chapter-note">Otrzymasz rozdział "Dlaczego większość planów treningowych nie działa" + dostęp do newslettera z wartościowymi treściami.</p>
             </div>
           </div>
         </div>
@@ -112,17 +122,23 @@ const Ebook = () => {
             <div className="section-line"></div>
           </div>
           <h2>Co znajdziesz w książce</h2>
-          <div className="toc-grid">
-            {chapters.map((chapter, index) => (
-              <div key={index} className="toc-item">
-                <span className="toc-number">{chapter.number}</span>
-                <div>
-                  <h3>{chapter.title}</h3>
-                  <p>{chapter.description}</p>
-                </div>
+          {tocBlocks.map((blk, bi) => (
+            <div key={bi} className="toc-block">
+              <h3 className="toc-block-title">{blk.block}</h3>
+              <div className="toc-grid">
+                {blk.chapters.map((chapter, index) => (
+                  <div key={index} className="toc-item">
+                    <span className="toc-number">{chapter.number}</span>
+                    <div>
+                      <h3>{chapter.title}</h3>
+                      <p>{chapter.description}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+          <p className="toc-closing">— Zakończenie Tomu I · O autorze</p>
         </div>
       </section>
 

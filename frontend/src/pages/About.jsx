@@ -70,7 +70,7 @@ const About = () => {
               
               <p>Przełom przyszedł kiedy zacząłem pracować z ludźmi którzy nie byli sportowcami. Osoby z bólem pleców mimo że "nic nie robią". Ludzie którzy próbowali 5 różnych planów treningowych i zawsze wracali do punktu wyjścia. 40-latkowie którzy chcieli wrócić do formy ale mieli pracę, rodzinę i chroniczny brak czasu.</p>
               
-              <p>Zrozumiałem że problem nie jest w braku wiedzy treningowej. Problem jest w braku systemu który uwzględnia rzeczywistość człowieka. Dlatego powstał System Staniszewskiego™ — metodologia łącząca ocenę funkcjonalną, trening, rehabilitację i monitoring w jeden spójny proces.</p>
+              <p>Zrozumiałem że problem nie jest w braku wiedzy treningowej. Problem jest w braku systemu który uwzględnia rzeczywistość człowieka. Dlatego powstał System Staniszewskiego™ — system łączący ocenę funkcjonalną, trening, rehabilitację i monitoring w jeden spójny proces.</p>
             </div>
           </div>
         </div>

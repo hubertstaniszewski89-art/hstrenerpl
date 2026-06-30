@@ -82,7 +82,7 @@ const Offer = () => {
       {/* HERO */}
       <section className="offer-hero section-dark">
         <div className="section-container">
-          <h1>Jedna metodologia.<br/>Trzy ścieżki współpracy.</h1>
+          <h1>Jeden system.<br/>Trzy ścieżki współpracy.</h1>
           <p className="offer-hero-subtitle">Wybierz punkt wejścia dopasowany do Twojej sytuacji.</p>
         </div>
       </section>
